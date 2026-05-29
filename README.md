@@ -35,3 +35,11 @@ Library yang digunakan:
 2. Buka folder di VS Code.
 3. Jalankan menggunakan Live Server.
 4. Pastikan internet aktif karena library menggunakan CDN.
+
+
+## Update V7
+
+- Layout mobile dibuat center dan tidak menempel ke kiri.
+- Hero, cake card, section heading, card, wish wall, dan footer diberi max-width khusus mobile agar pas di layar HP.
+- Default theme memakai key baru sehingga saat pertama dibuka kembali ke light/putih clean.
+- GSAP + Anime.js tetap dipakai untuk animasi, marquee, flame, dan micro-interaction.

@@ -2102,3 +2102,239 @@ body[data-theme="dark"] .cake-platform {
     max-width: 100px;
   }
 }
+
+
+/* === V7 Mobile Centered Responsive Fix ===
+   Mobile layout dibuat benar-benar center, tidak menempel ke kiri,
+   dan setiap blok dibatasi max-width supaya terasa pas di ukuran HP. */
+@media (max-width: 900px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    padding-left: clamp(18px, 5vw, 28px);
+    padding-right: clamp(18px, 5vw, 28px);
+  }
+
+  .hero-copy {
+    width: min(100%, 560px);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title,
+  .title-mask,
+  .title-line,
+  .hero-name {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .birthday-meta {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-visual {
+    width: min(100%, 420px);
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .premium-card {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-block {
+    width: 100%;
+    padding-left: clamp(18px, 5vw, 28px);
+    padding-right: clamp(18px, 5vw, 28px);
+  }
+
+  .section-head,
+  .memory-grid,
+  .timeline,
+  .letter-card,
+  .wish-wall,
+  .wish-maker {
+    width: min(100%, 560px);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-head {
+    text-align: center;
+  }
+
+  .wish-wall {
+    justify-content: center;
+  }
+
+  .wish-maker {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .site-footer {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 88px;
+    padding-bottom: 44px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .section-head,
+  .memory-grid,
+  .timeline,
+  .letter-card,
+  .wish-wall,
+  .wish-maker {
+    width: min(100%, 390px);
+    max-width: 390px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.65rem, 14.2vw, 4rem);
+    line-height: 1.06;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-name {
+    font-size: clamp(1.18rem, 6.4vw, 1.72rem);
+    line-height: 1.22;
+    letter-spacing: -0.03em;
+  }
+
+  .birthday-meta {
+    width: 100%;
+  }
+
+  .birthday-meta span {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    max-width: 360px;
+  }
+
+  .hero-actions {
+    width: min(100%, 350px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .primary-btn,
+  .secondary-btn,
+  .ghost-btn {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .premium-card {
+    min-height: 286px;
+  }
+
+  .card-topline {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .marquee-group {
+    font-size: clamp(1.18rem, 7.5vw, 1.85rem);
+  }
+
+  .memory-card {
+    text-align: center;
+  }
+
+  .memory-card > span {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .timeline {
+    text-align: left;
+  }
+
+  .letter-card {
+    text-align: center;
+  }
+
+  .letter-actions {
+    width: min(100%, 350px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .section-head,
+  .memory-grid,
+  .timeline,
+  .letter-card,
+  .wish-wall,
+  .wish-maker {
+    width: min(100%, 340px);
+    max-width: 340px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.45rem, 13.6vw, 3.35rem);
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+    width: min(100%, 310px);
+  }
+}

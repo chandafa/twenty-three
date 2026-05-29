@@ -53,7 +53,7 @@ function setDynamicText() {
 function initTheme() {
   const button = $('#themeToggle');
   const icon = button?.querySelector('.theme-icon');
-  const storageKey = 'birthday-theme-v6-mobile-clean';
+  const storageKey = 'birthday-theme-v7-mobile-centered';
   const savedTheme = localStorage.getItem(storageKey) || 'light';
 
   document.body.dataset.theme = savedTheme;
