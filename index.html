@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Creative birthday website for Meisya Al Zahra, 23rd birthday on 30 Mei 2026." />
+    <title>Happy Birthday Meisya Al Zahra — 23</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', '-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'Segoe UI', 'sans-serif'],
+              display: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Poppins', 'Segoe UI', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body data-theme="light" class="font-sans antialiased">
+    <div id="scrollProgress" aria-hidden="true"></div>
+
+    <div id="cursorDot" class="cursor-dot hidden lg:block"></div>
+    <div id="cursorRing" class="cursor-ring hidden lg:block"></div>
+
+    <div id="loader" class="loader" aria-label="Loading birthday website">
+      <div class="loader-shell">
+        <div class="loader-orbit" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="loader-kicker">Birthday experience</p>
+        <h2>Preparing<br />the moment</h2>
+        <div class="loader-progress">
+          <span id="loaderBar"></span>
+        </div>
+        <p id="loaderPercent" class="loader-percent">0%</p>
+      </div>
+    </div>
+
+    <nav class="site-nav">
+      <a href="#" class="brand magnetic" aria-label="BirthdayVerse Home">Birthday<span>Verse</span></a>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="#memories">Memories</a>
+        <a href="#letter">Letter</a>
+        <a href="#wishes">Wishes</a>
+      </div>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn magnetic" type="button" aria-label="Ganti tema">
+          <span class="theme-icon">☾</span>
+        </button>
+        <button id="soundToggle" class="icon-btn magnetic" type="button" aria-label="Aktifkan suara">
+          <span class="sound-icon">♪</span>
+        </button>
+        <button id="openMessageTop" class="nav-cta magnetic" type="button">Buka Pesan</button>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="aurora aurora-one"></div>
+        <div class="aurora aurora-two"></div>
+        <div class="aurora aurora-three"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow reveal-item">Special day unlocked</p>
+
+          <h1 class="hero-title" aria-label="Happy Birthday Meisya Al Zahra">
+            <span class="title-mask"><span class="title-line">Happy</span></span>
+            <span class="title-mask"><span class="title-line gradient-title">Birthday</span></span>
+            <span class="title-mask name-mask"><span data-recipient class="title-line hero-name">Meisya Al Zahra</span></span>
+          </h1>
+
+          <div class="birthday-meta reveal-item">
+            <span>23 Tahun</span>
+            <span>30 Mei 2026</span>
+            <span>For &nbsp;<strong data-recipient>Meisya Al Zahra</strong></span>
+          </div>
+
+          <p class="hero-desc reveal-item">
+            Hari ini bukan cuma tentang bertambahnya usia, tapi tentang cerita,
+            doa, dan versi terbaik yang sedang tumbuh pelan-pelan.
+          </p>
+
+          <div class="hero-actions reveal-item">
+            <button id="celebrateBtn" class="primary-btn magnetic" type="button">Celebrate Now</button>
+            <button id="openMessageHero" class="secondary-btn magnetic" type="button">Buka Pesan PDF</button>
+            <a href="#letter" class="ghost-btn magnetic">Open Letter</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-item" data-tilt>
+          <div class="premium-card">
+            <div class="card-topline">
+              <span>Today’s Mood</span>
+              <strong>100% Loved</strong>
+            </div>
+
+            <div class="cake-glow"></div>
+            <div class="cake-orbit orbit-a" aria-hidden="true"></div>
+            <div class="cake-orbit orbit-b" aria-hidden="true"></div>
+
+            <div class="cake-scene" aria-hidden="true">
+              <div class="candle"><span class="flame"></span></div>
+              <div class="cake-layer cake-layer-one"></div>
+              <div class="cake-layer cake-layer-two"></div>
+              <div class="cake-layer cake-layer-three"></div>
+              <div class="cake-platform"></div>
+            </div>
+
+            <div class="floating-pill pill-one">Twenty Three</div>
+            <div class="floating-pill pill-two">Dream</div>
+            <div class="floating-pill pill-three">Glow</div>
+
+            <div class="mini-countdown">
+              <div><strong id="daysValue">00</strong><span>Days</span></div>
+              <div><strong id="hoursValue">00</strong><span>Hours</span></div>
+              <div><strong id="minutesValue">00</strong><span>Minutes</span></div>
+              <div><strong id="secondsValue">00</strong><span>Seconds</span></div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="marquee-section" aria-label="Birthday marquee">
+        <div class="marquee">
+          <div class="marquee-track">
+            <div class="marquee-group">
+              <span>Meisya Al Zahra</span><b>✦</b><span>23 Tahun</span><b>✦</b><span>30 Mei 2026</span><b>✦</b><span>Make a wish</span><b>✦</b>
+            </div>
+            <div class="marquee-group" aria-hidden="true">
+              <span>Meisya Al Zahra</span><b>✦</b><span>23 Tahun</span><b>✦</b><span>30 Mei 2026</span><b>✦</b><span>Make a wish</span><b>✦</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="memories" class="section-block">
+        <div class="section-head reveal-item">
+          <p class="eyebrow">Little moments</p>
+          <h2>Kenangan kecil yang diam-diam jadi alasan untuk tersenyum.</h2>
+        </div>
+
+        <div class="memory-grid">
+          <article class="memory-card reveal-item" data-tilt>
+            <span>01</span>
+            <h3>First Laugh</h3>
+            <p>Tawa kecil yang bikin hari biasa berubah jadi lebih hangat.</p>
+          </article>
+          <article class="memory-card reveal-item" data-tilt>
+            <span>02</span>
+            <h3>Small Wins</h3>
+            <p>Setiap langkah kecil tetap layak dirayakan. Tidak harus besar untuk berarti.</p>
+          </article>
+          <article class="memory-card reveal-item" data-tilt>
+            <span>03</span>
+            <h3>Quiet Strength</h3>
+            <p>Kamu mungkin tidak selalu sadar, tapi caramu bertahan itu keren.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block timeline-section">
+        <div class="timeline">
+          <article class="timeline-item reveal-item">
+            <span>00:00</span>
+            <h3>New age loaded</h3>
+            <p>Chapter baru dimulai dengan doa baik, energi yang lebih lembut, dan langkah yang lebih yakin.</p>
+          </article>
+          <article class="timeline-item reveal-item">
+            <span>12:00</span>
+            <h3>Wish checkpoint</h3>
+            <p>Semoga hal-hal yang dulu cuma dibayangkan, pelan-pelan datang dalam bentuk nyata.</p>
+          </article>
+          <article class="timeline-item reveal-item last">
+            <span>23:59</span>
+            <h3>Gratitude saved</h3>
+            <p>Semua hal baik hari ini tersimpan sebagai bekal untuk hari-hari berikutnya.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="letter" class="section-block letter-section">
+        <div class="letter-card reveal-item">
+          <p class="eyebrow">A letter for you</p>
+          <h2>Untuk <span data-recipient>Meisya Al Zahra</span></h2>
+
+          <div class="letter-copy">
+            <p>Selamat ulang tahun ke-23. Semoga umur baru ini membawa banyak hal baik: hati yang lebih tenang, langkah yang lebih yakin, dan mimpi yang semakin dekat.</p>
+            <p class="hidden-letter">Jangan lupa, kamu tidak harus selalu sempurna untuk menjadi berharga. Kamu cukup terus tumbuh, belajar, dan tetap menjadi versi dirimu yang paling jujur.</p>
+            <p class="hidden-letter">Hari ini, semesta seperti punya satu tugas sederhana: mengingatkan bahwa kamu layak dirayakan.</p>
+          </div>
+
+          <div class="letter-actions">
+            <button id="letterBtn" class="primary-btn magnetic" type="button">Reveal More Magic</button>
+            <button id="openMessageLetter" class="secondary-btn magnetic" type="button">Buka Pesan PDF</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="wishes" class="section-block">
+        <div class="section-head reveal-item">
+          <p class="eyebrow">Wish wall</p>
+          <h2>Pilih satu doa, lalu kirim ke langit kecil kita.</h2>
+        </div>
+
+        <div class="wish-wall" id="wishWall">
+          <button class="wish-pill reveal-item" type="button">Sehat selalu</button>
+          <button class="wish-pill reveal-item" type="button">Mimpi tercapai</button>
+          <button class="wish-pill reveal-item" type="button">Bahagia yang tenang</button>
+          <button class="wish-pill reveal-item" type="button">Rezeki lancar</button>
+          <button class="wish-pill reveal-item" type="button">Dikelilingi orang baik</button>
+          <button class="wish-pill reveal-item" type="button">Semakin glow up</button>
+        </div>
+
+        <div class="wish-maker reveal-item">
+          <p id="selectedWish">Semoga semua doa baik tercapai</p>
+          <button id="sendWishBtn" class="primary-btn magnetic" type="button">Send Wish ✦</button>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        Created with admiration for <span data-recipient>Meisya Al Zahra</span> — from <span data-sender>Someone</span>.
+      </footer>
+    </main>
+
+    <div id="messageModal" class="message-modal hidden" role="dialog" aria-modal="true" aria-labelledby="messageTitle">
+      <div id="modalBackdrop" class="modal-backdrop"></div>
+      <div class="modal-card">
+        <div class="modal-head">
+          <div>
+            <p class="eyebrow">Private message</p>
+            <h3 id="messageTitle">Pesan Ulang Tahun</h3>
+          </div>
+          <div class="modal-actions">
+            <a id="openDriveLink" href="#" target="_blank" rel="noopener">Buka Tab</a>
+            <button id="closeMessage" type="button" aria-label="Tutup modal">×</button>
+          </div>
+        </div>
+        <div class="modal-frame-wrap">
+          <iframe id="messageFrame" title="PDF pesan ulang tahun" loading="lazy"></iframe>
+        </div>
+        
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite">Wish sent ✦</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
