@@ -1,6 +1,6 @@
 const CONFIG = {
   recipientName: 'Meisya Al Zahra',
-  senderName: 'Candra',
+  senderName: 'Someone',
   age: 23,
   birthdayLabel: '30 Mei 2026',
   birthdayISO: '2026-05-30T00:00:00+07:00',
